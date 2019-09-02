@@ -33,26 +33,37 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+
+     html
+     javascript
+     react
+     ;; restclient
+
+     python
+
+     csharp
+     ;; windows-scripts
+
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     ;; auto-completion
-     ;; better-defaults
+     auto-completion
+     better-defaults
      emacs-lisp
-     ;; git
+     git
      helm
-     ;; markdown
+     markdown
      multiple-cursors
-     ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
+     org
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
+     spell-checking
+     syntax-checking
      treemacs
-     ;; version-control
+     version-control
      )
 
    ;; List of additional packages that will be installed without being
@@ -357,7 +368,7 @@ It should only modify the values of Spacemacs settings."
    ;;   :size-limit-kb 1000)
    ;; When used in a plist, `visual' takes precedence over `relative'.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers t
 
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
@@ -450,6 +461,7 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
+
   )
 
 (defun dotspacemacs/user-load ()
@@ -457,6 +469,13 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 This function is called only while dumping Spacemacs configuration. You can
 `require' or `load' the libraries of your choice that will be included in the
 dump."
+
+  ;; China elpa repos mirror
+  (set configuration-layer-elpa-archives
+    '(("melpa-cn" . "https://elpa.emacs-china.org/melpa/")
+      ("org-cn"   . "https://elpa.emacs-china.org/org/")
+      ("gnu-cn"   . "https://elpa.emacs-china.org/gnu/")))
+
   )
 
 (defun dotspacemacs/user-config ()
