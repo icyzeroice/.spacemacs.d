@@ -8,3 +8,16 @@ https://github.com/syl20bnr/spacemacs/tree/develop
 
 https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa
 
+### Options
+
+Run in terminal:
+
+```
+$ emacs -nw
+```
+
+While emacs shows error:
+
+```
+$ emacs --debug-init
+```
