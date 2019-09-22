@@ -38,6 +38,7 @@ This function should only modify configuration layer settings."
      javascript
      react
      ;; restclient
+     protobuf
 
      python
 
