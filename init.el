@@ -33,16 +33,41 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-
+     ;; ----------------------------------------------------------------
+     ;; Front-end Technology Stack
+     ;; Enabled layers:
+     ;; URL `https://github.com/syl20bnr/spacemacs/tree/develop/layers/+lang/javascript'
+     ;; URL `https://github.com/syl20bnr/spacemacs/tree/develop/layers/+tools/import-js'
+     ;; ----------------------------------------------------------------
      html
-     javascript
+
+     import-js
+
+     web-beautify
+
+     (javascript :variables
+
+                 javascript-backend 'lsp ;; default
+                 javascript-lsp-linter nil
+
+                 javascript-fmt-tool 'web-beautify ;; default
+                 javascript-import-tool 'import-js)
+
+     typescript
+
      react
+
      ;; restclient
+
      protobuf
 
+     ;; ----------------------------------------------------------------
+     ;; Python Technology Stack
+     ;; ----------------------------------------------------------------
      python
 
      csharp
+
      ;; windows-scripts
 
      ;; ----------------------------------------------------------------
