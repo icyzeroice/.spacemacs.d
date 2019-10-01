@@ -488,6 +488,14 @@ configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
+  ;; China elpa repos mirror
+  ;; URL `http://elpa.emacs-china.org/'
+  ;; URL `https://mirror.tuna.tsinghua.edu.cn/help/elpa/'
+  (setq configuration-layer-elpa-archives
+    '(("melpa-cn" . "https://elpa.emacs-china.org/melpa/")
+      ("org-cn"   . "https://elpa.emacs-china.org/org/")
+      ("gnu-cn"   . "https://elpa.emacs-china.org/gnu/")))
+
   )
 
 (defun dotspacemacs/user-load ()
@@ -495,13 +503,6 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 This function is called only while dumping Spacemacs configuration. You can
 `require' or `load' the libraries of your choice that will be included in the
 dump."
-
-  ;; China elpa repos mirror
-  (set configuration-layer-elpa-archives
-    '(("melpa-cn" . "https://elpa.emacs-china.org/melpa/")
-      ("org-cn"   . "https://elpa.emacs-china.org/org/")
-      ("gnu-cn"   . "https://elpa.emacs-china.org/gnu/")))
-
   )
 
 (defun dotspacemacs/user-config ()
