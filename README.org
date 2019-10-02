@@ -1,0 +1,43 @@
+#+TITLE: .spacemacs.d
+#+AUTHOR: Ice Zero
+#+EMAIL: ziv3@outlook.com
+#+STARTUP: showeverything
+
+
+* Setup Spacemacs Configuration
+
+** Setup emacs
+
+*** Ubuntu 1804 PPA for The Latest Emacs
+
+[[https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa][https://launchpad.net/~ubuntu-elisp/+archive/ubuntu/ppa]]
+
+
+** Setup spacemacs
+
+[[https://github.com/syl20bnr/spacemacs/tree/develop][https://github.com/syl20bnr/spacemacs/tree/develop]]
+
+
+
+** Setup .spacemacs.d
+
+Clone this repo to ~/.spacemacs.d
+
+
+* Some Commands
+
+** Run emacs terminal
+
+#+begin_src sh
+$ emacs -nw
+#+end_src
+
+** See emacs debug info
+
+#+begin_src sh
+$ emacs --debug-init
+#+end_src
+
+** Set configurations
+
+=SPC SPC customize-variable=
