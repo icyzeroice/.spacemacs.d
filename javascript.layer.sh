@@ -2,8 +2,8 @@
 npm install -g \
     import-js \
     eslint \
-    js-beautify \
-    # language server protocol
+    # js-beautify \
+    # language server protocol \
     typescript \
     typescript-language-server
-    # prettier
+    prettier

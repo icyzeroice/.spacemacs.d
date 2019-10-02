@@ -50,7 +50,8 @@ This function should only modify configuration layer settings."
                  javascript-backend 'lsp ;; default
                  javascript-lsp-linter nil
 
-                 javascript-fmt-tool 'web-beautify ;; default
+                 ;; javascript-fmt-tool 'web-beautify ;; default
+                 javascript-fmt-tool 'prettier
                  javascript-import-tool 'import-js)
 
      typescript
@@ -153,7 +154,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    ;; (default 5)
-   dotspacemacs-elpa-timeout 5
+   dotspacemacs-elpa-timeout 60
 
    ;; Set `gc-cons-threshold' and `gc-cons-percentage' when startup finishes.
    ;; This is an advanced option and should not be changed unless you suspect
