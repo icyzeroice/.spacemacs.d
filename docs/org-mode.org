@@ -1,0 +1,65 @@
+#+TITLE: Org Mode
+#+DATE: <2019-10-05 六> 
+#+TAGS: { @drawer(d) @list(l) @tag(t) } @others(o)
+
+* List[fn:plain_list] :l:
+  
+** Unordered List
+   
+  bullets: =-=, =+=, =*=
+ 
+** Ordered List
+   
+  bullets: =1)=, =1.=
+   
+** Description
+   
+  start with: =::=
+   
+  ATTENTION: only for unordered list
+   
+
+** Exmaple
+   
+   1. AAA
+   2. BBB
+      1. aaa
+      2. bbb
+   3. CCC
+      + eee
+      + ccc
+        + zzz :: explain something
+        + dd :: description here
+   4. DDD
+   [@20] 不同的项
+      * yes
+      * test :: here
+        * a
+        * b
+   
+   a. AAA
+   b. BBB
+      a. aaa
+   [@d] DDD
+   
+   1) AAA
+   2) BBB
+      1) aaa
+   3) CCC
+  
+      
+   
+* Drawers[fn:drawers] :d:
+  
+
+* Tags[fn:tags] :t:
+
+ 
+   
+* Property Syntax[fn:property_syntax] :d:
+  
+   
+[fn:plain_list] 2.6-Plain-Lists https://orgmode.org/org.html#Plain-Lists 
+[fn:drawers] 2.7-Drawers https://orgmode.org/org.html#Drawers
+[fn:tags] 6-Tags https://orgmode.org/org.html#Tags
+[fn:property_syntax] 7.1-Property-Syntax https://orgmode.org/org.html#Property-Syntax
