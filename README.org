@@ -3,6 +3,9 @@
 #+EMAIL: ziv3@outlook.com
 #+STARTUP: showeverything
 
+* TODO List
+  
+****** TODO auto pull to update from github like =oh-my-zsh=
 
 * Setup Spacemacs Configuration
 
