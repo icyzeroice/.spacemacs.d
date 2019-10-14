@@ -1,0 +1,34 @@
+#+TITLE: Org Latex
+#+DATE: <2019-10-14 一> 
+#+LATEX_CLASS: beamer
+#+LATEX_CLASS_OPTIONS: [presentation]
+
+
+* Latex
+  
+** Exporting
+   
+*** LaTeX/PDF
+    
+| Emacs Commands               | Description                                               |
+|------------------------------+-----------------------------------------------------------|
+| =org-latex-export-to-latex=  | export =.org= to =.tex=                                   |
+| =org-latex-export-as-latex=  | preview without creating file at disk                     |
+| =org-latex-export-to-pdf=    | =.org= -> =.pdf=                                          |
+| =org-export-dispatch= =l o=  | convert to =.pdf= and open it with the default pdf viewer |
+| =org-export-region-as-latex= |                                                           |
+
+
+* Beamer
+  
+** Exporting
+  
+*** Commands
+   
+| Emacs Commands               | Description                                    |
+|------------------------------+------------------------------------------------|
+| =org-beamer-export-to-latex= | export =.org= to =.tex=                        |
+| =org-beamer-export-as-latex= | export to buffer and do not create =.tex= file |
+| =org-beamer-export-to-pdf=   | =.org= -> =.tex= -> =.pdf=                     |
+| =org-export-dispatch= =l O=  | export to =.pdf= and open it                   |
+
