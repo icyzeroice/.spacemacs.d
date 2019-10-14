@@ -29,18 +29,14 @@ Clone this repo to ~/.spacemacs.d
 
 * Some Commands
 
-** Run emacs terminal
+| Description      | Commands             |
+|------------------+----------------------|
+| emacs terminal   | =emacs -nw=          |
+| emacs debug info | =emacs --debug-init= |
 
-#+begin_src sh
-$ emacs -nw
-#+end_src
 
-** See emacs debug info
 
-#+begin_src sh
-$ emacs --debug-init
-#+end_src
-
-** Set configurations
-
-=SPC SPC customize-variable=
+| Description               | Key Bindings                |
+|---------------------------+-----------------------------|
+| set custom configurations | =SPC SPC customize-variable |
+|                           |                             |
