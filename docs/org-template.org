@@ -1,0 +1,19 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t
+#+options: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:t e:t
+#+options: email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
+#+options: tasks:t tex:t timestamp:t title:t toc:t todo:t |:t
+#+title: org-template
+#+date: <2019-10-15 二>
+#+author: Ice Zero
+#+email: ice@iceubt
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 27.0.50 (Org mode 9.2.6)
+
+
+* Org Template
+
+|                                      |                       |
+|--------------------------------------+-----------------------|
+| =org-export-insert-default-template= | some preset-templates |

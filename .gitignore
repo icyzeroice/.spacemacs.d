@@ -1,1 +1,7 @@
+
+# generated caches
 .spacemacs.env
+
+# export files
+*.tex
+*.pdf

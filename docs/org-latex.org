@@ -1,7 +1,12 @@
 #+TITLE: Org Latex
+#+AUTHOR: Ice Zero
+#+EMAIL: ziv3@outlook.com
 #+DATE: <2019-10-14 一> 
+#+STARTUP: beamer
 #+LATEX_CLASS: beamer
 #+LATEX_CLASS_OPTIONS: [presentation]
+#+BEAMER_FRAME_LEVEL: 2
+#+COLUMNS: %40ITEM %10BEAMER_env(Env) %9BEAMER_envargs(Env Args) %4BEAMER_col(Col) %10BEAMER_extra(Extra)
 
 
 * Latex
@@ -32,3 +37,6 @@
 | =org-beamer-export-to-pdf=   | =.org= -> =.tex= -> =.pdf=                     |
 | =org-export-dispatch= =l O=  | export to =.pdf= and open it                   |
 
+
+** Presentation
+   
