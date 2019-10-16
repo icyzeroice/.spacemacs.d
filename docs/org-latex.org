@@ -1,7 +1,7 @@
 #+TITLE: Org Latex
 #+AUTHOR: Ice Zero
 #+EMAIL: ziv3@outlook.com
-#+DATE: <2019-10-14 一> 
+#+DATE: <2019-10-14 一>
 #+STARTUP: beamer
 #+LATEX_CLASS: beamer
 #+LATEX_CLASS_OPTIONS: [presentation]
@@ -40,3 +40,21 @@
 
 ** Presentation
    
+*** Frames
+    
+| Special line           | Short          | value  | Description |
+|------------------------+----------------+--------+-------------|
+| =#+BEAMER_FRAME_LEVEL= | =#+OPTIONS: H= | number |             |
+
+
+*** Blocks
+
+=:BEAMER_ENV:=
+
+*** Special Syntax
+
+    
+* Reference
+
+- https://orgmode.org/worg/exporters/beamer/tutorial.html
+- https://orgmode.org/org.html
