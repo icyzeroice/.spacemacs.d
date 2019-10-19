@@ -1,10 +1,12 @@
 #+TITLE: Example Presentation
 #+AUTHOR: Carsten Dominik
 #+OPTIONS: H:2 toc:t num:t
+#+STARTUP: beamer showeverything
 #+LATEX_CLASS: beamer
 #+LATEX_CLASS_OPTIONS: [presentation]
-#+BEAMER_THEME: Madrid
-#+COLUMNS: %45ITEM %10BEAMER_ENV(Env) %10BEAMER_ACT(Act) %4BEAMER_COL(Col)
+# #+BEAMER_THEME: Madrid
+#+BEAMER_THEME: Rochester
+#+COLUMNS: %40ITEM %10BEAMER_ENV(Env) %9BEAMER_envargs(Env Args) %4BEAMER_COL(Col) %10BEAMER_extra(Extra)
 
 * This is the first structural section
 
@@ -38,3 +40,108 @@
 *** Request
 
     Please test this stuff!
+
+    
+** A more complex slide
+
+This slide illustrates the use of Beamer blocks.  The following text,
+with its own headline, is displayed in a block:
+
+*** Org mode increases productivity                               :B_theorem:
+    :PROPERTIES:
+    :BEAMER_env: theorem
+    :END:
+
+    - org mode means not having to remember LaTeX commands.
+    - it is based on ascii text which is inherently portable.
+    - Emacs!
+
+    \hfill \(\qed\)
+
+    
+
+** Two columns
+   
+*** A block                                           :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :END:
+    
+- this slide consists of two columns
+- the first (left) column has no heading and consists of text
+- the second (right) column has an image and is enclosed in an @example@ block
+
+*** A screenshot                                      :BMCOL:
+    :PROPERTIES:
+    :BEAMER_col: 0.6
+    :END:
+    
+#+ATTR_LATEX: width=\textwidth
+[[file:./favicon.jpg]]
+
+
+
+** Babel
+   :PROPERTIES:
+   :BEAMER_envargs: [t]
+   :END:
+   
+*** Octave code						      :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.45
+    :BEAMER_env: block
+    :END:
+    
+#+name: octaveexample
+#+begin_src octave :results output :exports both
+A = [1 2 ; 3 4]
+b = [1; 1];
+x = A\b
+#+end_src
+
+*** The output						      :BMCOL:B_block:
+    :PROPERTIES:
+    :BEAMER_col: 0.4
+    :BEAMER_env: block
+    :BEAMER_envargs: <2->
+    :END:
+
+#+results: octaveexample
+#+begin_example
+A =
+
+   1   2
+   3   4
+
+x =
+
+  -1
+   1
+
+#+end_example
+
+** Beamer Specific Syntax
+
+#+BEAMER: \pause
+
+#+BEGIN_EXPORT beamer
+  Only Beamer export back-end exports this.
+#+END_BEAMER
+
+Text @@beamer:some code@@ within a paragraph.
+
+A *@@beamer:<2->@@useful* feature
+
+
+** Beamer Specific Syntax
+
+#+ATTR_BEAMER: :environment nonindentlist
+- item 1, not indented
+- item 2, not indented
+- item 3, not indented
+#+ATTR_BEAMER: :overlay <+->
+- item 1
+- item 2
+#+ATTR_BEAMER: :options [Lagrange]
+Let $G$ be a finite group, and let $H$ be
+a subgroup of $G$.  Then the order of $H$ divides the order of $G$.

@@ -2,7 +2,7 @@
 #+AUTHOR: Ice Zero
 #+EMAIL: ziv3@outlook.com
 #+DATE: <2019-10-14 一>
-#+STARTUP: beamer
+#+STARTUP: showeverything beamer
 #+LATEX_CLASS: beamer
 #+LATEX_CLASS_OPTIONS: [presentation]
 #+BEAMER_FRAME_LEVEL: 2
@@ -38,18 +38,20 @@
 | =org-export-dispatch= =l O=  | export to =.pdf= and open it                   |
 
 
-** Presentation
+** Elements
    
-*** Frames
+*** Frames/Slides
     
-| Special line           | Short          | value  | Description |
-|------------------------+----------------+--------+-------------|
-| =#+BEAMER_FRAME_LEVEL= | =#+OPTIONS: H= | number |             |
+| Special line           | Short          | value  | Description                             |
+|------------------------+----------------+--------+-----------------------------------------|
+| =#+BEAMER_FRAME_LEVEL= | =#+OPTIONS: H= | number | which level header to export as a slide |
+
 
 
 *** Blocks
 
-=:BEAMER_ENV:=
+Block 
+
 
 *** Special Syntax
 

@@ -6,6 +6,7 @@
 * TODO List
   
 ****** TODO auto pull to update from github like =oh-my-zsh=
+****** TODO org-mode latex & beamer support Chinese
 
 * Setup Spacemacs Configuration
 

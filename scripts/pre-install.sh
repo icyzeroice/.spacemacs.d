@@ -7,6 +7,13 @@ sudo apt install \
      texlive-fonts-recommended \
      texlive-fonts-extra \
      texlive-latex-extra
+# For solve the problem --- "! LaTeX Error: File 'CJKutf8.sty' not found."
+# https://tex.stackexchange.com/questions/17611/how-does-one-type-chinese-in-latex/
+# https://tex.stackexchange.com/questions/125843/how-to-install-cjk-font-to-ubuntu-latex
+     latex-cjk-all
+     
+
+
 ## Mac OS (select one of below)
 # brew cask install mactex
 # brew cask install basictex
