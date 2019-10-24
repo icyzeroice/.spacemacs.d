@@ -508,6 +508,7 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 This function is called only while dumping Spacemacs configuration. You can
 `require' or `load' the libraries of your choice that will be included in the
 dump."
+
   )
 
 (defun dotspacemacs/user-config ()
@@ -516,6 +517,16 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+
+  ;; ---------------------------------------------------------
+  ;; Enable below code while in mac os.
+  ;; More detail please refer to 
+  ;; http://0x100.club/wiki_emacs/mac-org-mode-output-pdf.html
+  ;; ---------------------------------------------------------
+  ;; (setenv "PATH" (concat (getenv "PATH") ":/usr/local/texlive/2019/bin/x86_64-darwin/"))
+  ;; (setq exec-path (append exec-path '("/usr/local/texlive/2019/bin/x86_64-darwin/")))
+  ;; (setq org-latex-pdf-process '("xelatex -interaction nonstopmode %f" "xelatex -interaction nonstopmode %f"))
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
