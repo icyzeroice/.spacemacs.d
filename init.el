@@ -70,7 +70,7 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      ;; CG Stack
      ;; ----------------------------------------------------------------
-     shaders
+     gpu
      csharp
 
      ;; windows-scripts
