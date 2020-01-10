@@ -1,7 +1,7 @@
 # DO NOT use the shell in emacs!!!
 
-# Org LaTeX
-## Ubtuntu
+# * Org LaTeX
+# ** Ubtuntu
 sudo apt install \
      texlive-latex-base \
      texlive-fonts-recommended \
@@ -11,15 +11,17 @@ sudo apt install \
 # https://tex.stackexchange.com/questions/17611/how-does-one-type-chinese-in-latex/
 # https://tex.stackexchange.com/questions/125843/how-to-install-cjk-font-to-ubuntu-latex
      latex-cjk-all
-     
 
-
-## Mac OS (select one of below)
+# ** Mac OS (select one of below)
 # brew cask install mactex
 # brew cask install basictex
 
 
-# JavaScript Layer
+# * Spell Checking
+# brew install aspell
+
+
+# * JavaScript Layer
 npm install -g \
     import-js \
     eslint \
