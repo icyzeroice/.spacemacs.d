@@ -20,6 +20,12 @@ sudo apt install \
 # * Spell Checking
 # brew install aspell
 
+# * GraphViz
+# ** Mac OS
+# brew install graphviz
+# ** Ubuntu
+# sudo apt install graphviz
+
 
 # * JavaScript Layer
 npm install -g \
