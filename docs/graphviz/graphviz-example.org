@@ -1,0 +1,14 @@
+* GraphViz
+  
+** Example
+   
+#+begin_src dot :file images/test-dot.png :exports results
+  graph simple_example {
+  a--b;
+  b--c;
+  c--d;
+  }
+#+end_src
+
+#+RESULTS:
+[[file:images/test-dot.png]]
