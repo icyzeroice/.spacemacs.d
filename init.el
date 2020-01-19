@@ -80,6 +80,9 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      markdown
      graphviz
+     (plantuml :variables
+               plantuml-jar-path "~/.spacemacs.d/additions/plantuml/plantuml.jar"
+               org-plantuml-jar-path "~/.spacemacs.d/additions/plantuml/plantuml.jar")
 
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -541,6 +544,12 @@ before packages are loaded."
   (setenv "PATH" (concat (getenv "PATH") ":/usr/local/texlive/2019/bin/x86_64-darwin/"))
   (setq exec-path (append exec-path '("/usr/local/texlive/2019/bin/x86_64-darwin/")))
   (setq org-latex-pdf-process '("xelatex -interaction nonstopmode %f" "xelatex -interaction nonstopmode %f"))
+
+
+  ;; ---------------------------------------------------------
+  ;; Plant UML
+  ;; ---------------------------------------------------------
+  (setq plantuml-default-exec-mode 'jar)
 
   )
 

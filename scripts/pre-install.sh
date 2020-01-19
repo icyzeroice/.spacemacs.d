@@ -1,5 +1,7 @@
 # DO NOT use the shell in emacs!!!
 
+
+
 # * Org LaTeX
 # ** Ubtuntu
 sudo apt install \
@@ -17,14 +19,23 @@ sudo apt install \
 # brew cask install basictex
 
 
+
 # * Spell Checking
 # brew install aspell
+
+
 
 # * GraphViz
 # ** Mac OS
 # brew install graphviz
 # ** Ubuntu
 # sudo apt install graphviz
+
+
+
+# * Plant UML
+# download jar: https://plantuml.com/zh/download
+
 
 
 # * JavaScript Layer
