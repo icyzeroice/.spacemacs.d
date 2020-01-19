@@ -38,6 +38,12 @@ sudo apt install \
 
 
 
+# * Java
+# ** Mac OS
+# brew cask install java
+# ** Ubuntu
+
+
 # * JavaScript Layer
 npm install -g \
     import-js \

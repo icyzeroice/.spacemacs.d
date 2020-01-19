@@ -1,0 +1,13 @@
+* Plant UML
+  
+** Example
+   
+#+begin_src plantuml :file images/test-plantuml.png :exports results
+  @startuml
+  A->B : yes
+  A<-B : hi
+  @enduml
+#+end_src
+
+#+RESULTS:
+[[file:images/test-plantuml.png]]

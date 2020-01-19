@@ -81,8 +81,8 @@ This function should only modify configuration layer settings."
      markdown
      graphviz
      (plantuml :variables
-               plantuml-jar-path "~/.spacemacs.d/additions/plantuml/plantuml.jar"
-               org-plantuml-jar-path "~/.spacemacs.d/additions/plantuml/plantuml.jar")
+               plantuml-jar-path "~/.spacemacs.d/addons/plantuml/plantuml.jar"
+               org-plantuml-jar-path "~/.spacemacs.d/addons/plantuml/plantuml.jar")
 
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
