@@ -79,10 +79,22 @@ This function should only modify configuration layer settings."
      ;; Structured Document
      ;; ----------------------------------------------------------------
      markdown
+
+     (org :variables
+          org-enable-github-support t
+          org-enable-reveal-js-support t)
+
      graphviz
      (plantuml :variables
                plantuml-jar-path "~/.spacemacs.d/addons/plantuml/plantuml.jar"
                org-plantuml-jar-path "~/.spacemacs.d/addons/plantuml/plantuml.jar")
+
+     ;; ----------------------------------------------------------------
+     ;; Chinese
+     ;; ----------------------------------------------------------------
+     (chinese :variables
+              chinese-default-input-method nil
+              chinese-enable-youdao-dict t)
 
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -95,10 +107,6 @@ This function should only modify configuration layer settings."
      git
      helm
      multiple-cursors
-
-     (org :variables
-          org-enable-github-support t
-          org-enable-reveal-js-support t)
 
      (shell :variables
             shell-default-height 30
@@ -113,6 +121,7 @@ This function should only modify configuration layer settings."
      syntax-checking
      treemacs
      version-control
+     search-engine
      )
 
    ;; List of additional packages that will be installed without being
@@ -550,6 +559,11 @@ before packages are loaded."
   ;; Plant UML
   ;; ---------------------------------------------------------
   (setq plantuml-default-exec-mode 'jar)
+
+  ;; ---------------------------------------------------------
+  ;; Chinese
+  ;; ---------------------------------------------------------
+  ;; (spacemacs//set-monospaced-font "Source Code Pro" "STHeiti" 14 16)
 
   )
 
