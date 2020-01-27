@@ -565,6 +565,7 @@ before packages are loaded."
   ;; 中文对齐了吗
   ;; ---------------------------------------------------------
   ;; * Method 1
+  ;; `<SPC> f e R' to make the config work
   (spacemacs//set-monospaced-font "Source Code Pro" "STHeiti" 10 12)
   ;;
   ;; * Method 2
