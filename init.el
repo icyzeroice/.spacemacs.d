@@ -565,25 +565,31 @@ before packages are loaded."
   ;; 中文对齐了吗
   ;; ---------------------------------------------------------
   ;; * Method 1
-  ;; `<SPC> f e R' to make the config work
+  ;;  - chinese-layer: `<SPC> f e R' to make the config work
   (spacemacs//set-monospaced-font "Source Code Pro" "STHeiti" 10 12)
   ;;
   ;; * Method 2
+  ;;  - https://archive.casouri.cat/note/2019/emacs-%E5%AD%97%E4%BD%93%E4%B8%8E%E5%AD%97%E4%BD%93%E9%9B%86/
   ;; (set-face-attribute 'default nil :font "Droid Sans Mono")
   ;; (set-fontset-font t 'latin "Noto Sans")
   ;; (set-fontset-font t 'han "Noto Sans CJK SC Regular")
   ;; (set-fontset-font t 'kana "Noto Sans CJK JP Regular")
   ;;
   ;; * Method 3
+  ;;  - https://www.zhihu.com/question/52693161/answer/133565611
+  ;;  - https://www.callmewing.com/2015/12/08/Spacemacs%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/
   ;; (setq-default dotspacemacs-default-font '("Source Code Pro"
   ;;                                           :size 13
   ;;                                           :weight normal
   ;;                                           :width normal
   ;;                                           :powerline-scale 1.1))
-
+  ;;
   ;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
   ;;   (set-fontset-font (frame-parameter nil 'font)
   ;;                     charset (font-spec :family "STHeiti" :size 16)))
+  ;;
+  ;; * Method 4
+  ;;  - https://github.com/tumashu/cnfonts
 
   )
 
