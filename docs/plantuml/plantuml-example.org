@@ -1,3 +1,5 @@
+#+STARTUP: showeverything
+
 * Plant UML
   
 ** Example
@@ -11,3 +13,8 @@
 
 #+RESULTS:
 [[file:images/test-plantuml.png]]
+
+
+* Reference
+
+- https://plantuml.com/zh/

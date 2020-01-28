@@ -1,3 +1,5 @@
+#+STARTUP: showeverything
+
 * GraphViz
   
 ** Example
@@ -12,3 +14,8 @@
 
 #+RESULTS:
 [[file:images/test-dot.png]]
+
+
+* Reference
+
+- https://graphviz.gitlab.io/_pages/pdf/dotguide.pdf

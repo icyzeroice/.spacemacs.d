@@ -54,6 +54,13 @@
       
    
 * Drawers[fn:drawers] :d:
+:PROPERTIES:
+:ID: e2a3-abce
+:END:
+:DIY:
+- [[protocol:yourself][description]]
+:END:
+ 
   
 
 * Tags[fn:tags] :t:
