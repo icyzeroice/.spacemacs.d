@@ -138,6 +138,28 @@
 #+RESULTS:
 [[file:./images/example-sprite.png]]
 
+* C4 Model
+  :RESOURCES:
+  :GIT:  https://github.com/RicardoNiepel/C4-PlantUML
+  :END:
+
+#+begin_src plantuml :file ./images/c4-modal.png :exports results
+  @startuml C4_Elements
+  !includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+
+  Person(personAlias, "Label", "Optional Description")
+  Container(containerAlias, "Label", "Technology", "Optional Description")
+  System(systemAlias, "Label", "Optional Description")
+
+  Rel(personAlias, containerAlias, "Label", "Optional Technology")
+  @enduml
+#+end_src
+
+#+RESULTS:
+[[file:./images/c4-modal.png]]
+
+
+
 
 * Reference
 
