@@ -1,8 +1,9 @@
+#+TITLE: Plant UML
+
 #+STARTUP: showeverything
 
-* Plant UML
   
-** Example
+* Sequence Diagram
    
 #+begin_src plantuml :file images/test-plantuml.png :exports results
   @startuml
@@ -13,6 +14,77 @@
 
 #+RESULTS:
 [[file:images/test-plantuml.png]]
+
+
+* Component Diagram
+  
+** Declare
+   
+#+begin_src plantuml :file ./images/example-declare.png :exports results
+  [Component 1]
+  [Component 2] as C2
+  component Name
+  component [Long Name] as LN
+  component [Wrapping\nName] as WL
+
+  () "Interface 1"
+  () "Interface 2" as I2
+  interface Example0
+  interface "Example 1" as E1
+  interface "Example\n2" as E2
+
+  NoAlias - Example0
+  Example0 -> Name
+  Name ..> E1
+  E1 <-- LN
+  LN -> E2 : description
+  E2 <-- WL
+  [New Component] -> () "New Interface"
+
+  note right of LN : Http
+  note right of E2
+          yes
+          it is
+  end note
+#+end_src
+
+#+RESULTS:
+[[file:./images/example-declare.png]]
+
+** Sprite
+  
+#+begin_src plantuml :file ./images/example-sprite.png :exports results
+  @startuml
+  sprite $businessProcess [16x16/16] {
+  FFFFFFFFFFFFFFFF
+  FFFFFFFFFFFFFFFF
+  FFFFFFFFFFFFFFFF
+  FFFFFFFFFFFFFFFF
+  FFFFFFFFFF0FFFFF
+  FFFFFFFFFF00FFFF
+  FF00000000000FFF
+  FF000000000000FF
+  FF00000000000FFF
+  FFFFFFFFFF00FFFF
+  FFFFFFFFFF0FFFFF
+  FFFFFFFFFFFFFFFF
+  FFFFFFFFFFFFFFFF
+  FFFFFFFFFFFFFFFF
+  FFFFFFFFFFFFFFFF
+  FFFFFFFFFFFFFFFF
+  }
+
+
+  rectangle " End to End\nbusiness process" <<$businessProcess>> {
+   rectangle "inner process 1" <<$businessProcess>> as src
+   rectangle "inner process 2" <<$businessProcess>> as tgt
+   src -> tgt
+  }
+  @enduml
+#+end_src
+
+#+RESULTS:
+[[file:./images/example-sprite.png]]
 
 
 * Reference
