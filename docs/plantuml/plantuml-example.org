@@ -16,6 +16,19 @@
 [[file:images/test-plantuml.png]]
 
 
+#+begin_src plantuml :file images/test-plantuml2.png :exports results
+  @startuml
+
+  A->B : yes
+  A<-B : hi
+  @enduml
+#+end_src
+
+#+RESULTS:
+[[file:images/test-plantuml2.png]]
+
+
+
 * Component Diagram
   
 ** Declare
@@ -50,6 +63,45 @@
 
 #+RESULTS:
 [[file:./images/example-declare.png]]
+
+
+
+
+** UML2
+
+#+begin_src plantuml :file ./images/example-declare-uml2.png :exports results
+  skinparam componentStyle uml2
+
+  [Component 1]
+  [Component 2] as C2
+  component Name
+  component [Long Name] as LN
+  component [Wrapping\nName] as WL
+
+  () "Interface 1"
+  () "Interface 2" as I2
+  interface Example0
+  interface "Example 1" as E1
+  interface "Example\n2" as E2
+
+  NoAlias - Example0
+  Example0 -> Name
+  Name ..> E1
+  E1 <-- LN
+  LN -> E2 : description
+  E2 <-- WL
+  [New Component] -> () "New Interface"
+
+  note right of LN : Http
+  note right of E2
+          yes
+          it is
+  end note
+#+end_src
+
+#+RESULTS:
+[[file:./images/example-declare.png]]
+
 
 ** Sprite
   
