@@ -204,6 +204,12 @@
 
 
 
+* Color
+:RESOURCES:
+- https://plantuml.com/zh/color
+:END:
+
+
 
 * Reference
 
