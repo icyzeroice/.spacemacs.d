@@ -6,6 +6,7 @@
 ;; 写在数字后面的是商品符号
 ;; 
 ;; 关于汇率......
+;; 关于货币代码：https://www.iso.org/iso-4217-currency-codes.html
 
 
 ;; 3.4.2 Commodity equivalences 定义商品等式
