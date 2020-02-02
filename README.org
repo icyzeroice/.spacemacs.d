@@ -41,3 +41,11 @@ Clone this repo to ~/.spacemacs.d
 |---------------------------+-----------------------------|
 | set custom configurations | =SPC SPC customize-variable |
 |                           |                             |
+
+
+* If you get into trouble somehow
+
+try https://github.com/syl20bnr/spacemacs/issues/13226#issuecomment-580050535
+
+1. ~SPC f e U~
+2. ~SPC q R~
