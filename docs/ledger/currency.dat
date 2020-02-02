@@ -1,0 +1,47 @@
+; -*- ledger -*-
+
+;; 3.4 Commodities and Currencies 商品和货币
+;;
+;; 写在数字前面的是货币符号
+;; 写在数字后面的是商品符号
+;; 
+;; 关于汇率......
+
+
+;; 3.4.2 Commodity equivalences 定义商品等式
+;;
+;; 关于内置的时间换算
+2020/02/01 Work done for company
+    Billable:Client                                          1h
+    Project:A
+
+2020/02/01 Return ten minutes to the project
+    Project:A                                               10m
+    Billable:Client
+
+2020/02/01 Work done for company
+    Billable:Client                                          1h
+    Project:B
+
+2020/02/01 Return ten seconds to the project B
+    Project:B                                               10s
+    Billable:Client
+;; 使用 balance，你可以看到时间已被正确计算
+
+
+;;
+;; 自定义
+C 1.00 Kb = 1024 b
+C 1.00 Mb = 1024 Kb
+C 1.00 Gb = 1024 Mb
+C 1.00 Tb = 1024 Gb
+C 1.00 Pb = 1024 Tb
+
+2020/02/01 Netdisk usage
+    Net Assets:Video                                        10Gb
+    Net Disk:Baidu
+
+2020/02/01 Netdisk feedback
+    Net Disk:Baidu                                         100Mb
+    Net Assets:Video
+;; 震撼我m!!!!!!

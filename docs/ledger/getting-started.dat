@@ -1,0 +1,63 @@
+; -*- ledger -*-
+;; 文件头部写上上面这一行，帮助 ledger 辨识文件
+
+;; 1. Quick Start
+2004/9/29 My Employer
+    Assets:Checking                                    $500.00
+    Income:Salary                                     $-500.00
+    
+2004/9/29 My Employer
+    Assets:Checking                                    $500.00
+    Income:Salary
+
+2004/9/30 Restaurant
+    Expenses:Dining                                     $25.00
+    Liabilities:MasterCard
+
+
+;; 3.3.1 Tracking reimbursable expenses 跟踪可报销的开销
+;;
+;; 下面一笔开销表示我们在 Circuit City 这个地方通过 MasterCard 花了 $100
+;; 并且这笔开销是替 Company XYZ 花的，所以我们把它记在 Assets:Reimbursements 这个账户上
+2004/09/29 Circuit City
+    Assets:Reimbursements:Company XYZ                  $100.00
+    Liabilities:MasterCard
+
+;; 一但 Compony XYZ 偿还，这笔钱就会从可报销的账户回到我们常规资源账户
+2004/09/29 Company XYZ
+    Assets:Checking                                    $100.00
+    Assets:Reimbursements:Company XYZ
+
+;; 然后关于公司是自己开的这个场景，暂时用不到，略
+
+
+;; Usage of ~apply account~
+apply account accountName
+2004/10/01 X
+    A:C  ￥100.00
+    I:S
+
+2004/10/01 X
+    A:M  ￥100.00
+    I:W
+
+2004/10/01 X
+    A:C:A  ￥100.00
+    I:W:X
+end apply account
+
+;; 
+2004/10/01 X
+    A:C  ￥100.00
+    I:S
+
+2004/10/01 X
+    A:M  ￥100.00
+    I:W
+
+2004/10/01 X
+    A:C:A  ￥100.00
+    I:W:X
+
+
+
