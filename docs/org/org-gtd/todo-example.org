@@ -1,0 +1,21 @@
+
+# 设置了 ~org-enforce-todo-dependencies~ 后，这个只有当子任务都完成后才可以完成父任务
+* TODO Parent Task
+** TODO Write letter to Senera
+** DONE Write letter to Shirakami Fubuki
+   CLOSED: [2020-02-02 Sun 15:50]
+# 这个只有顺序
+* Parent
+:PROPERTIES:
+:ORDERED:  t
+:END:
+** TODO a
+** TODO b, needs to wait for (a)
+** TODO c, needs to wait for (a) and (b)
+# 这个父任务可以不用等子任务完成才能完成啦
+* TODO This entry is never blocked
+:PROPERTIES:
+:NOBLOCKING: t
+:END:
+** TODO task a
+** TODO task b
