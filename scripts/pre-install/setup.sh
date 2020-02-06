@@ -122,14 +122,7 @@ function setup_javascript()
 
 function setup_ledger_ubuntu()
 {
-    sudo apt-get install build-essential cmake doxygen \
-         libboost-system-dev libboost-dev python-dev gettext git \
-         libboost-date-time-dev libboost-filesystem-dev \
-         libboost-iostreams-dev libboost-python-dev libboost-regex-dev \
-         libboost-test-dev libedit-dev libgmp3-dev libmpfr-dev texinfo tzdata
-
-    git clone git://github.com/ledger/ledger.git ~/Applications/ledger
-    cd ~/Applications/ledger && ./acprep update
+    sudo apt install ledger
 }
 function setup_ledger_macos()
 {
