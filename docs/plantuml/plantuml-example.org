@@ -1,7 +1,5 @@
 #+TITLE: Plant UML
 
-#+STARTUP: showeverything
-
   
 * Sequence Diagram
    
@@ -26,7 +24,6 @@
 
 #+RESULTS:
 [[file:images/test-plantuml2.png]]
-
 
 
 * Component Diagram
@@ -182,6 +179,41 @@
 #+RESULTS:
 [[file:./images/example-sprite.png]]
 
+* Gantt Diagram
+  #+begin_src plantuml :file ./images/gantt-example.png :exports results
+    @startgantt
+
+    project starts the 2020/02/03
+    saturday are closed
+    sunday are closed
+    2020/02/04 is closed
+
+    -- Separator 1 --
+    [Feature1] lasts 10 days
+    then [BUG] lasts 2 days and is colored in Coral/Green
+    [Feature2] lasts 3 days
+    [BUG] -> [Feature2]
+
+    -- Separator A --
+    [Design] lasts 2 days
+
+    -- Project DEVA --
+    [Survey] lasts 3 days
+    [Development] lasts 3 days and ends at 2020/02/21
+    [Test] starts at 2020/02/18 and ends at 2020/02/21
+
+    -- Working with resources --
+    [Task1] on {Alice} lasts 10 days
+    [Task2] on {Project:50%} lasts 5 days
+    [Task3] on {Project:20%} lasts 1 days
+    [Task4] on {Alice:20%} lasts 1 days
+
+    @endgantt
+  #+end_src
+
+  #+RESULTS:
+  [[file:./images/gantt-example.png]]
+  
 * C4 Model
   :RESOURCES:
   :GIT:  https://github.com/RicardoNiepel/C4-PlantUML
@@ -203,12 +235,10 @@
 [[file:./images/c4-modal.png]]
 
 
-
 * Color
 :RESOURCES:
 - https://plantuml.com/zh/color
 :END:
-
 
 
 * Reference
