@@ -90,6 +90,11 @@ function setup_graphviz_macos()
     # download plant uml: https://plantuml.com/zh/download
     # brew cask install java
 }
+function setup_graphviz_windows()
+{
+    scoop install graphviz
+    # scoop install openjdk10
+}
 function setup_graphviz()
 {
     case "$(get_system_core_type)" in

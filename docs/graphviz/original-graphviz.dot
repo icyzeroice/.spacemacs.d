@@ -1,0 +1,5 @@
+graph dotExample {
+  a--b;
+  b--c;
+  c--d;
+}
