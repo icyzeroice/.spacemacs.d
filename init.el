@@ -106,6 +106,7 @@ This function should only modify configuration layer settings."
      emacs-lisp
      git
      helm
+     ivy
      multiple-cursors
 
      (shell :variables
