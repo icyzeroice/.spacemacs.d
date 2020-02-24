@@ -71,7 +71,8 @@ This function should only modify configuration layer settings."
      ;; CG Stack
      ;; ----------------------------------------------------------------
      gpu
-     csharp
+     (csharp :variables
+             csharp-backend 'lsp)
 
      ;; windows-scripts
 
