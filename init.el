@@ -575,13 +575,28 @@ before packages are loaded."
   ;; ---------------------------------------------------------
   (setq plantuml-default-exec-mode 'jar)
 
+
   ;; ---------------------------------------------------------
   ;; Chinese aligment
   ;; Oh, MyGod! 中文对齐了吗Example
   ;; ---------------------------------------------------------
   ;; https://github.com/tumashu/cnfonts
-  (cnfonts-enable)
-  (cnfonts-set-spacemacs-fallback-fonts)
+  ;; (cnfonts-enable)
+  ;; (cnfonts-set-spacemacs-fallback-fonts)
+  (set-face-attribute
+   'default nil
+   :font (font-spec :name "-outline-Consolas-bold-italic-normal-mono-*-*-*-*-c-*-iso10646-1"
+                    :weight 'normal
+                    :slant 'normal
+                    :size 10.0))
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font
+     (frame-parameter nil 'font)
+     charset
+     (font-spec :name "-outline-微软雅黑-normal-normal-normal-sans-*-*-*-*-p-*-iso10646-1"
+                :weight 'normal
+                :slant 'normal
+                :size 12.0)))
 
   )
 
@@ -608,9 +623,6 @@ This function is called at the very end of Spacemacs initialization."
      ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
      ("account" "%(binary) -f %(ledger-file) reg %(account)"))))
  '(org-enforce-todo-dependencies t)
- '(package-selected-packages
-   (quote
-    (youdao-dictionary treemacs-persp treemacs-icons-dired typescript-mode org-superstar magit-section treemacs lsp-ivy lsp-mode markdown-mode js2-mode ivy-yasnippet htmlize flyspell-correct flycheck csharp-mode counsel company cnfonts anaconda-mode auto-complete avy pinyinlib yasnippet projectile iedit smartparens magit git-commit with-editor package-lint ivy transient magit-popup pythonic dash powerline all-the-icons org-plus-contrib hydra evil undo-tree bind-key async dap-mode bui org-re-reveal yasnippet-snippets yapfify xterm-color ws-butler writeroom-mode winum which-key web-mode web-beautify vterm volatile-highlights vi-tilde-fringe uuidgen use-package unfill treemacs-projectile treemacs-magit treemacs-evil toc-org tide tagedit symon symbol-overlay string-inflection spaceline-all-the-icons smeargle slim-mode shell-pop scss-mode sass-mode rjsx-mode restart-emacs rainbow-delimiters pytest pyenv-mode py-isort pug-mode protobuf-mode prettier-js popwin pippel pipenv pip-requirements persp-mode pcre2el password-generator paradox overseer orgit org-projectile org-present org-pomodoro org-mime org-download org-cliplink org-bullets org-brain open-junk-file omnisharp nodejs-repl nameless mwim multi-term move-text mmm-mode markdown-toc magit-svn magit-gitflow macrostep lsp-ui lsp-treemacs lsp-python-ms lorem-ipsum livid-mode live-py-mode link-hint json-snatcher json-reformat json-navigator json-mode js2-refactor js-doc indent-guide importmagic import-js impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-org-rifle helm-org helm-mode-manager helm-make helm-lsp helm-gitignore helm-git-grep helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gnuplot gitignore-templates gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy font-lock+ flyspell-correct-helm flycheck-pos-tip flycheck-package flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode doom-modeline diminish diff-hl devdocs define-word cython-mode company-web company-tern company-statistics company-lsp company-anaconda column-enforce-mode clean-aindent-mode centered-cursor-mode browse-at-remote blacken auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent ace-link ace-jump-helm-line ac-ispell)))
  '(typescript-indent-level 2)
  '(web-mode-code-indent-offset 2)
  '(web-mode-enable-auto-indentation t)
