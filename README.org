@@ -5,8 +5,8 @@
 
 * TODO List
   
-****** TODO auto pull to update from github like =oh-my-zsh=
-****** TODO org-mode latex & beamer support Chinese
+** TODO auto pull to update from github like =oh-my-zsh=
+** TODO org-mode latex & beamer support Chinese
 
 * Setup Spacemacs Configuration
 
@@ -25,7 +25,9 @@
 
 ** Setup .spacemacs.d
 
-Clone this repo to ~/.spacemacs.d
+Clone this repo to =~/.spacemacs.d=
+
+PS: on windows10 platform is =$HOME/AppData/Roaming/.spacemacs.d=
 
 
 * Some Commands
