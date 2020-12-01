@@ -566,9 +566,12 @@ before packages are loaded."
   ;; More detail please refer to
   ;; http://0x100.club/wiki_emacs/mac-org-mode-output-pdf.html
   ;; ---------------------------------------------------------
-  (setenv "PATH" (concat (getenv "PATH") ":/usr/local/texlive/2019/bin/x86_64-darwin/"))
-  (setq exec-path (append exec-path '("/usr/local/texlive/2019/bin/x86_64-darwin/")))
-  (setq org-latex-pdf-process '("xelatex -interaction nonstopmode %f" "xelatex -interaction nonstopmode %f"))
+  (pcase system-type
+    ('darwin (progn
+                (setenv "PATH" (concat (getenv "PATH") ":/usr/local/texlive/2019/bin/x86_64-darwin/"))
+                (setq exec-path (append exec-path '("/usr/local/texlive/2019/bin/x86_64-darwin/")))
+                (setq org-latex-pdf-process '("xelatex -interaction nonstopmode %f" "xelatex -interaction nonstopmode %f"))
+                )))
 
 
   ;; ---------------------------------------------------------
