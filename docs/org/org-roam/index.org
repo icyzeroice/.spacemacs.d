@@ -1,0 +1,4 @@
+
+[[https://github.com/syl20bnr/spacemacs/tree/develop/layers/%2Bemacs/org#org-roam-support]]
+
+

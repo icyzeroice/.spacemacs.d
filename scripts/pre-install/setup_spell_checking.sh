@@ -1,6 +1,6 @@
 function setup_spell_checking_ubuntu()
 {
-    # TODO:
+    # TODO
     echo "setup_spell_checking_ubuntu"
 }
 function setup_spell_checking_macos()
@@ -27,4 +27,5 @@ setup_spell_checking
 
 
 # file ends here
+
 
