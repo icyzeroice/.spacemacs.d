@@ -535,6 +535,9 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
+  ;; Lockfiles
+  ;; https://www.spacemacs.org/doc/FAQ.html#orgheadline18
+  (setq create-lockfiles nil)
 
   ;; China elpa repos mirror
   ;; URL `http://elpa.emacs-china.org/'
