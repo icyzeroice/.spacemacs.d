@@ -391,7 +391,7 @@ It should only modify the values of Spacemacs settings."
    ;; If non-nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
    ;; (default nil) (Emacs 24.4+ only)
-   dotspacemacs-maximized-at-startup t
+   dotspacemacs-maximized-at-startup nil
 
    ;; If non-nil the frame is undecorated when Emacs starts up. Combine this
    ;; variable with `dotspacemacs-maximized-at-startup' in OSX to obtain
@@ -540,9 +540,13 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; URL `http://elpa.emacs-china.org/'
   ;; URL `https://mirror.tuna.tsinghua.edu.cn/help/elpa/'
   (setq configuration-layer-elpa-archives
-    '(("melpa-cn" . "https://elpa.emacs-china.org/melpa/")
-      ("org-cn"   . "https://elpa.emacs-china.org/org/")
-      ("gnu-cn"   . "https://elpa.emacs-china.org/gnu/")))
+    '(("melpa-cn"             . "https://elpa.emacs-china.org/melpa/")
+      ("org-cn"               . "https://elpa.emacs-china.org/org/")
+      ("gnu-cn"               . "https://elpa.emacs-china.org/gnu/")
+      ("marmalade-cn"         . "https://elpa.emacs-china.org/marmalade/")
+      ("sunrise-commander-cn" . "https://elpa.emacs-china.org/sunrise-commander/")
+      ("user42"               . "https://elpa.emacs-china.org/user42/")
+      ("nongnu"               . "https://elpa.nongnu.org/nongnu/")))
 
   )
 
@@ -643,8 +647,7 @@ This function is called at the very end of Spacemacs initialization."
  '(org-enforce-todo-dependencies t)
  '(org-roam-tag-sources
    '(prop vanilla all-directories last-directory first-directory))
- '(package-selected-packages
-   '(org-roam emacsql-sqlite3 emacsql youdao-dictionary yasnippet-snippets yapfify xterm-color ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package unfill undo-tree treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil toc-org tide terminal-here tagedit symon symbol-overlay string-inflection sphinx-doc spaceline-all-the-icons smex smeargle slim-mode shell-pop scss-mode sass-mode rjsx-mode restart-emacs request rainbow-delimiters pytest pyenv-mode py-isort pug-mode protobuf-mode prettier-js popwin plantuml-mode pippel pipenv pip-requirements pcre2el password-generator paradox pangu-spacing ox-gfm overseer orgit org-superstar org-rich-yank org-re-reveal org-projectile org-present org-pomodoro org-mime org-download org-cliplink org-brain opencl-mode open-junk-file omnisharp nodejs-repl nameless mwim multi-term move-text mmm-mode markdown-toc magit-svn magit-section magit-gitflow macrostep lsp-ui lsp-treemacs lsp-python-ms lsp-pyright lsp-origami lsp-ivy lorem-ipsum livid-mode live-py-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide importmagic import-js impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make graphviz-dot-mode google-translate golden-ratio gnuplot glsl-mode gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ gh-md fuzzy font-lock+ flyspell-popup flyspell-correct-ivy flycheck-pos-tip flycheck-package flycheck-ledger flycheck-elsa flx-ido find-by-pinyin-dired fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-ledger evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help engine-mode emr emmet-mode elisp-slime-nav editorconfig dumb-jump dotenv-mode diminish devdocs define-word cython-mode cuda-mode counsel-projectile counsel-css company-web company-anaconda column-enforce-mode cnfonts clean-aindent-mode chinese-conv centered-cursor-mode browse-at-remote blacken auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent ace-pinyin ace-link ac-ispell))
+ '(package-selected-packages '())
  '(typescript-indent-level 2)
  '(web-mode-code-indent-offset 2)
  '(web-mode-enable-auto-indentation t)
