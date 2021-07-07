@@ -82,6 +82,15 @@ This function should only modify configuration layer settings."
      ;; windows-scripts
 
      ;; ----------------------------------------------------------------
+     ;; Other formatter
+     ;; ----------------------------------------------------------------
+     yaml
+
+     ;; npm i -g dockerfile-language-server-nodejs
+     (docker :variables
+             docker-dockerfile-backend 'lsp)
+
+     ;; ----------------------------------------------------------------
      ;; Structured Document
      ;; ----------------------------------------------------------------
      markdown
@@ -641,6 +650,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(css-indent-offset 2)
+ '(evil-want-Y-yank-to-eol nil)
  '(js-indent-level 2)
  '(js2-strict-missing-semi-warning nil)
  '(ledger-reports
@@ -652,7 +662,8 @@ This function is called at the very end of Spacemacs initialization."
  '(org-enforce-todo-dependencies t)
  '(org-roam-tag-sources
    '(prop vanilla all-directories last-directory first-directory))
- '(package-selected-packages '())
+ '(package-selected-packages
+   '(yaml-mode youdao-dictionary yasnippet-snippets yapfify xterm-color ws-butler writeroom-mode winum which-key wgrep web-mode web-beautify vterm volatile-highlights vi-tilde-fringe uuidgen use-package unfill undo-tree treemacs-projectile treemacs-persp treemacs-magit treemacs-icons-dired treemacs-evil toc-org tide terminal-here tagedit symon symbol-overlay string-inflection string-edit sphinx-doc spaceline-all-the-icons smex smeargle slim-mode shell-pop scss-mode sass-mode rjsx-mode restart-emacs request rainbow-delimiters quickrun pytest pyenv-mode py-isort pug-mode protobuf-mode prettier-js popwin poetry plantuml-mode pippel pipenv pip-requirements pcre2el password-generator paradox pangu-spacing ox-gfm overseer orgit-forge org-superstar org-roam org-rich-yank org-re-reveal org-projectile org-present org-pomodoro org-mime org-download org-contrib org-cliplink org-brain opencl-mode open-junk-file omnisharp npm-mode nose nodejs-repl nameless mwim multi-term multi-line mmm-mode markdown-toc macrostep lsp-ui lsp-treemacs lsp-python-ms lsp-pyright lsp-origami lsp-ivy lorem-ipsum livid-mode live-py-mode link-hint json-navigator json-mode js2-refactor js-doc ivy-yasnippet ivy-xref ivy-purpose ivy-hydra ivy-avy indent-guide importmagic import-js impatient-mode hybrid-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-make graphviz-dot-mode google-translate golden-ratio gnuplot glsl-mode gitignore-templates gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ gh-md fuzzy font-lock+ flyspell-popup flyspell-correct-ivy flycheck-pos-tip flycheck-package flycheck-ledger flycheck-elsa flx-ido find-by-pinyin-dired fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-textobj-line evil-surround evil-org evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-lion evil-ledger evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-escape evil-ediff evil-easymotion evil-collection evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help engine-mode emr emmet-mode elisp-slime-nav editorconfig dumb-jump drag-stuff dotenv-mode dired-quick-sort diminish define-word cython-mode cuda-mode counsel-projectile counsel-css company-web company-anaconda column-enforce-mode cnfonts clean-aindent-mode chinese-conv centered-cursor-mode browse-at-remote blacken auto-yasnippet auto-highlight-symbol auto-dictionary auto-compile aggressive-indent ace-pinyin ace-link ac-ispell))
  '(typescript-indent-level 2)
  '(web-mode-code-indent-offset 2)
  '(web-mode-enable-auto-indentation t)
