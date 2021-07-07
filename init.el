@@ -36,8 +36,8 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      ;; Front-end Technology Stack
      ;; Enabled layers:
-     ;; URL `https://github.com/syl20bnr/spacemacs/tree/develop/layers/+lang/javascript'
-     ;; URL `https://github.com/syl20bnr/spacemacs/tree/develop/layers/+tools/import-js'
+     ;; URL https://github.com/syl20bnr/spacemacs/tree/develop/layers/+lang/javascript
+     ;; URL https://github.com/syl20bnr/spacemacs/tree/develop/layers/+tools/import-js
      ;; ----------------------------------------------------------------
      html
 
@@ -46,6 +46,8 @@ This function should only modify configuration layer settings."
      web-beautify
 
      (javascript :variables
+
+                 js2-mode-show-strict-warnings nil
 
                  javascript-backend 'lsp ;; default
                  javascript-lsp-linter nil
