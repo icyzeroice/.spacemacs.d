@@ -8,12 +8,14 @@
 ;; (dolist (name (font-family-list))
 ;;   (print name))
 
-(pcase system-type
-  ('darwin (progn (print 1)
-                  (print 2)))
-  ('windows-nt (progn (print 3)
-                      (print 4)))
-  (code (progn (print 5)
-               (print system-type))))
+;; (pcase system-type
+;;   ('darwin (progn (print 1)
+;;                   (print 2)))
+;;   ('windows-nt (progn (print 3)
+;;                       (print 4)))
+;;   ('gnu/linux (progn (print 6)))
+;;   (code (progn (print 5)
+;;                (print system-type))))
 
 
+(message (getenv "proxy"))
