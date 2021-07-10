@@ -668,8 +668,7 @@ This function is called at the very end of Spacemacs initialization."
  '(org-enforce-todo-dependencies t)
  '(org-roam-tag-sources
    '(prop vanilla all-directories last-directory first-directory))
- '(package-selected-packages
-   '())
+ ;; '(package-selected-packages '())
  '(typescript-indent-level 2)
  '(web-mode-code-indent-offset 2)
  '(web-mode-enable-auto-indentation t)
