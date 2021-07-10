@@ -98,7 +98,9 @@ This function should only modify configuration layer settings."
      (org :variables
           org-enable-github-support t
           org-enable-reveal-js-support t
-          org-enable-roam-support t)
+          org-enable-roam-support t
+          org-roam-directory "~/Codespaces/org-roam"
+          org-directory "~/Codespaces/org")
 
      graphviz
      (plantuml :variables
