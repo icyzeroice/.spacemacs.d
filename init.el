@@ -645,9 +645,8 @@ before packages are loaded."
                                   :size 15.0)))))
 
     ;; https://hungyi.net/posts/browse-emacs-urls-wsl/
-    ('gnu/linux (progn (when (string-match
-                               "microsoft"
-                               (shell-command-to-string "uname -a"))
+    ;; https://www.reddit.com/r/bashonubuntuonwindows/comments/70i8aa/making_emacs_on_wsl_open_links_in_windows_web/
+    ('gnu/linux (progn (when (string-match "microsoft" (shell-command-to-string "uname -a"))
                          (setq browse-url-generic-program "/mnt/c/Windows/System32/cmd.exe"
                                browse-url-generic-args '("/c" "start" "")
                                browse-url-browser-function 'browse-url-generic))))
