@@ -643,6 +643,15 @@ before packages are loaded."
                                   :weight 'normal
                                   :slant 'normal
                                   :size 15.0)))))
+
+    ;; https://hungyi.net/posts/browse-emacs-urls-wsl/
+    ('gnu/linux (progn (when (string-match
+                               "microsoft"
+                               (shell-command-to-string "uname -a"))
+                         (setq browse-url-generic-program "/mnt/c/Windows/System32/cmd.exe"
+                               browse-url-generic-args '("/c" "start" "")
+                               browse-url-browser-function 'browse-url-generic))))
+
     (code (progn (cnfonts-enable)
                  (cnfonts-set-spacemacs-fallback-fonts))))
 
@@ -665,15 +674,16 @@ This function is called at the very end of Spacemacs initialization."
  '(js-indent-level 2)
  '(js2-strict-missing-semi-warning nil)
  '(ledger-reports
-   '(("balance" "ledger ")
+   (quote
+    (("balance" "ledger ")
      ("bal" "%(binary) -f %(ledger-file) bal")
      ("reg" "%(binary) -f %(ledger-file) reg")
      ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
-     ("account" "%(binary) -f %(ledger-file) reg %(account)")))
+     ("account" "%(binary) -f %(ledger-file) reg %(account)"))))
  '(org-enforce-todo-dependencies t)
  '(org-roam-tag-sources
-   '(prop vanilla all-directories last-directory first-directory))
- ;; '(package-selected-packages '())
+   (quote
+    (prop vanilla all-directories last-directory first-directory)))
  '(typescript-indent-level 2)
  '(web-mode-code-indent-offset 2)
  '(web-mode-enable-auto-indentation t)

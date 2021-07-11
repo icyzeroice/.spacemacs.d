@@ -19,3 +19,8 @@
 
 
 (message (getenv "proxy"))
+
+(message (shell-command-to-string "uname -a"))
+
+;; (print (string-match "microsoft" (shell-command-to-string "uname -a")))
+
