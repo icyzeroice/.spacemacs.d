@@ -145,6 +145,9 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      ;; Others
      ;; ----------------------------------------------------------------
+     (wakatime :variables
+               wakatime-api-key "caead82a-2ebd-4328-8aed-8956b65e77a7")
+
      finance
      )
 
