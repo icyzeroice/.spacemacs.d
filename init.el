@@ -557,9 +557,11 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
 
   ;; For WSL2 using proxy
   ;; https://github.com/syl20bnr/spacemacs/issues/8984#issuecomment-321307979
-  (setq url-proxy-services
-	'(("http"    . "172.24.80.1:10809")
-	  ("https"   . "172.24.80.1:10809")))
+  (pcase system-type
+    ('gnu/linux (progn (when (string-match "microsoft" (shell-command-to-string "uname -a"))
+      (setq url-proxy-services
+      '(("http"    . "172.24.80.1:10809")
+        ("https"   . "172.24.80.1:10809")))))))
 
   ;; China elpa repos mirror
   ;; URL `http://elpa.emacs-china.org/'
