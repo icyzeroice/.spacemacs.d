@@ -24,3 +24,8 @@
 
 ;; (print (string-match "microsoft" (shell-command-to-string "uname -a")))
 
+
+(defun icing/is-wsl ()
+  (equal system-type 'gnu/linux))
+
+;; (message (icing/is-wsl))
