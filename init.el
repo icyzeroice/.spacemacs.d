@@ -45,6 +45,9 @@ This function should only modify configuration layer settings."
 
      web-beautify
 
+     (json :variables
+           json-fmt-tool 'web-beautify)
+
      (javascript :variables
 
                  js2-mode-show-strict-warnings nil
