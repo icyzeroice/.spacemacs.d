@@ -46,7 +46,7 @@ This function should only modify configuration layer settings."
      web-beautify
 
      (json :variables
-           json-fmt-tool 'web-beautify)
+           json-fmt-tool 'prettier)
 
      (javascript :variables
 
