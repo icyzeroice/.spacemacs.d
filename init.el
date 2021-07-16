@@ -619,45 +619,47 @@ before packages are loaded."
   ;; Oh, MyGod! 中文对齐了吗Example
   ;; ---------------------------------------------------------
   ;; https://github.com/tumashu/cnfonts
-  (pcase system-type
-    ('windows-nt (progn (set-face-attribute
-                          'default nil
-                          :font (font-spec :name "-outline-Consolas-bold-italic-normal-mono-*-*-*-*-c-*-iso10646-1"
-                                          :weight 'normal
-                                          :slant 'normal
-                                          :size 10.0))
-                        (dolist (charset '(kana han symbol cjk-misc bopomofo))
-                          (set-fontset-font
-                            (frame-parameter nil 'font)
-                            charset
-                            (font-spec :name "-outline-微软雅黑-normal-normal-normal-sans-*-*-*-*-p-*-iso10646-1"
-                                      :weight 'normal
-                                      :slant 'normal
-                                      :size 12.0)))))
-    ('darwin (progn (set-face-attribute
-                      'default nil
-                      :font (font-spec :name "-*-Monaco-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1"
-                                      :weight 'normal
-                                      :slant 'normal
-                                      :size 12.5))
-                    (dolist (charset '(kana han symbol cjk-misc bopomofo))
-                      (set-fontset-font
-                        (frame-parameter nil 'font)
-                        charset
-                        (font-spec :name "-*-Hiragino Sans GB-normal-normal-normal-*-*-*-*-*-p-0-iso10646-1"
-                                  :weight 'normal
-                                  :slant 'normal
-                                  :size 15.0)))))
+  ;; https://lists.gnu.org/archive/html/emacs-devel/2006-12/msg00285.html 
+  (if (display-graphic-p)
+    (pcase system-type
+      ('windows-nt (progn (set-face-attribute
+                            'default nil
+                            :font (font-spec :name "-outline-Consolas-bold-italic-normal-mono-*-*-*-*-c-*-iso10646-1"
+                                            :weight 'normal
+                                            :slant 'normal
+                                            :size 10.0))
+                          (dolist (charset '(kana han symbol cjk-misc bopomofo))
+                            (set-fontset-font
+                              (frame-parameter nil 'font)
+                              charset
+                              (font-spec :name "-outline-微软雅黑-normal-normal-normal-sans-*-*-*-*-p-*-iso10646-1"
+                                        :weight 'normal
+                                        :slant 'normal
+                                        :size 12.0)))))
+      ('darwin (progn (set-face-attribute
+                        'default nil
+                        :font (font-spec :name "-*-Monaco-normal-normal-normal-*-*-*-*-*-m-0-iso10646-1"
+                                        :weight 'normal
+                                        :slant 'normal
+                                        :size 12.5))
+                      (dolist (charset '(kana han symbol cjk-misc bopomofo))
+                        (set-fontset-font
+                          (frame-parameter nil 'font)
+                          charset
+                          (font-spec :name "-*-Hiragino Sans GB-normal-normal-normal-*-*-*-*-*-p-0-iso10646-1"
+                                    :weight 'normal
+                                    :slant 'normal
+                                    :size 15.0)))))
 
-    ;; https://hungyi.net/posts/browse-emacs-urls-wsl/
-    ;; https://www.reddit.com/r/bashonubuntuonwindows/comments/70i8aa/making_emacs_on_wsl_open_links_in_windows_web/
-    ('gnu/linux (progn (when (string-match "microsoft" (shell-command-to-string "uname -a"))
-                         (setq browse-url-generic-program "/mnt/c/Windows/System32/cmd.exe"
-                               browse-url-generic-args '("/c" "start" "")
-                               browse-url-browser-function 'browse-url-generic))))
+      ;; https://hungyi.net/posts/browse-emacs-urls-wsl/
+      ;; https://www.reddit.com/r/bashonubuntuonwindows/comments/70i8aa/making_emacs_on_wsl_open_links_in_windows_web/
+      ('gnu/linux (progn (when (string-match "microsoft" (shell-command-to-string "uname -a"))
+                          (setq browse-url-generic-program "/mnt/c/Windows/System32/cmd.exe"
+                                browse-url-generic-args '("/c" "start" "")
+                                browse-url-browser-function 'browse-url-generic))))
 
-    (code (progn (cnfonts-enable)
-                 (cnfonts-set-spacemacs-fallback-fonts))))
+      (code (progn (cnfonts-enable)
+                  (cnfonts-set-spacemacs-fallback-fonts)))))
 
   )
 
