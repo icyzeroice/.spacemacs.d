@@ -563,8 +563,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (pcase system-type
     ('gnu/linux (progn (when (string-match "microsoft" (shell-command-to-string "uname -a"))
       (setq url-proxy-services
-      '(("http"    . "172.24.80.1:10809")
-        ("https"   . "172.24.80.1:10809")))))))
+      '(("http"    . "192.168.208.1:10809")
+        ("https"   . "192.168.208.1:10809")))))))
 
   ;; China elpa repos mirror
   ;; URL `http://elpa.emacs-china.org/'
