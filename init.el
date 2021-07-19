@@ -622,7 +622,7 @@ before packages are loaded."
   ;; Oh, MyGod! 中文对齐了吗Example
   ;; ---------------------------------------------------------
   ;; https://github.com/tumashu/cnfonts
-  ;; https://lists.gnu.org/archive/html/emacs-devel/2006-12/msg00285.html 
+  ;; https://lists.gnu.org/archive/html/emacs-devel/2006-12/msg00285.html
   (if (display-graphic-p)
     (pcase system-type
       ('windows-nt (progn (set-face-attribute
