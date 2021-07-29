@@ -682,13 +682,6 @@ This function is called at the very end of Spacemacs initialization."
  '(evil-want-Y-yank-to-eol nil)
  '(js-indent-level 2)
  '(js2-strict-missing-semi-warning nil)
- '(ledger-reports
-   (quote
-    (("balance" "ledger ")
-     ("bal" "%(binary) -f %(ledger-file) bal")
-     ("reg" "%(binary) -f %(ledger-file) reg")
-     ("payee" "%(binary) -f %(ledger-file) reg @%(payee)")
-     ("account" "%(binary) -f %(ledger-file) reg %(account)"))))
  '(org-enforce-todo-dependencies t)
  '(org-roam-tag-sources
    (quote
