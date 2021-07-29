@@ -607,8 +607,20 @@ before packages are loaded."
                 (setq org-latex-pdf-process '("xelatex -interaction nonstopmode %f" "xelatex -interaction nonstopmode %f"))
 
                 ;; https://github.com/d12frosted/homebrew-emacs-plus#no-titlebar
-                (setq frame-resize-pixelwise t)
-                )))
+                (setq frame-resize-pixelwise t)))
+
+    ;; https://hungyi.net/posts/browse-emacs-urls-wsl/
+    ;; https://www.reddit.com/r/bashonubuntuonwindows/comments/70i8aa/making_emacs_on_wsl_open_links_in_windows_web/
+    ('gnu/linux (progn (when (string-match "microsoft" (shell-command-to-string "uname -a"))
+                         ;; Try 1:
+                         (setq browse-url-generic-program "/mnt/c/Windows/System32/cmd.exe"
+                               browse-url-generic-args '("/c" "start" "")
+                               browse-url-browser-function 'browse-url-generic)
+                         ;; Try 2: https://stackoverflow.com/questions/25261200/no-usable-browser-found-error-when-using-emacs-to-browse-hyperspec/25261294
+                         ;; (setq browse-url-generic-program
+                         ;;       (executable-find (getenv "BROWSER"))
+                         ;;       browse-url-browser-function 'browse-url-generic)
+                         ))))
 
 
   ;; ---------------------------------------------------------
@@ -653,13 +665,6 @@ before packages are loaded."
                                     :weight 'normal
                                     :slant 'normal
                                     :size 15.0)))))
-
-      ;; https://hungyi.net/posts/browse-emacs-urls-wsl/
-      ;; https://www.reddit.com/r/bashonubuntuonwindows/comments/70i8aa/making_emacs_on_wsl_open_links_in_windows_web/
-      ('gnu/linux (progn (when (string-match "microsoft" (shell-command-to-string "uname -a"))
-                          (setq browse-url-generic-program "/mnt/c/Windows/System32/cmd.exe"
-                                browse-url-generic-args '("/c" "start" "")
-                                browse-url-browser-function 'browse-url-generic))))
 
       (code (progn (cnfonts-enable)
                   (cnfonts-set-spacemacs-fallback-fonts)))))
