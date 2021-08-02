@@ -558,13 +558,16 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;; https://www.spacemacs.org/doc/FAQ.html#orgheadline18
   (setq create-lockfiles nil)
 
+  ;; Org Roam 2.0
+  (setq org-roam-v2-ack t)
+
   ;; For WSL2 using proxy
   ;; https://github.com/syl20bnr/spacemacs/issues/8984#issuecomment-321307979
   (pcase system-type
     ('gnu/linux (progn (when (string-match "microsoft" (shell-command-to-string "uname -a"))
       (setq url-proxy-services
-      '(("http"    . "192.168.208.1:10809")
-        ("https"   . "192.168.208.1:10809")))))))
+      '(("http"    . "172.18.208.1:10809")
+        ("https"   . "172.18.208.1:10809")))))))
 
   ;; China elpa repos mirror
   ;; URL `http://elpa.emacs-china.org/'
