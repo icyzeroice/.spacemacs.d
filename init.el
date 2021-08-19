@@ -146,12 +146,14 @@ This function should only modify configuration layer settings."
      search-engine
 
      ;; ----------------------------------------------------------------
-     ;; Others
+     ;; Other applications
      ;; ----------------------------------------------------------------
      (wakatime :variables
                wakatime-api-key "caead82a-2ebd-4328-8aed-8956b65e77a7")
 
      finance
+
+     (elfeed :variables rmh-elfeed-org-files (list (concat org-roam-directory "/elfeed.org")))
      )
 
    ;; List of additional packages that will be installed without being
