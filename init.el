@@ -574,11 +574,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (pcase system-type
     ('gnu/linux (progn (when (string-match "microsoft" (shell-command-to-string "uname -a"))
       (setq url-proxy-services
-      ;; '(("http"    . (concat (getenv "window_host") ":10809"))
-      ;;   ("https"   . (concat (getenv "window_host") ":10809")))
-            '(("http" . "172.17.0.1:10809")
-              ("https" . "172.17.0.1:10809"))
-      )))))
+            (cons `("http"  . ,(concat (getenv "window_host") ":10809"))
+                  `(("https" . ,(concat (getenv "window_host") ":10809")))))))))
 
   ;; China elpa repos mirror
   ;; URL `http://elpa.emacs-china.org/'
