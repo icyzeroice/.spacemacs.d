@@ -148,6 +148,7 @@ This function should only modify configuration layer settings."
                      spell-checking-enable-by-default nil)
 
      syntax-checking
+     tabs
      treemacs
      version-control
 
@@ -605,6 +606,10 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+
+  (spacemacs/toggle-truncate-lines-on)
+
+  (add-hook 'text-mode-hook 'spacemacs/toggle-visual-line-navigation-on)
 
   ;; ---------------------------------------------------------
   ;; Enable below code while in mac os.
