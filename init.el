@@ -148,7 +148,9 @@ This function should only modify configuration layer settings."
                      spell-checking-enable-by-default nil)
 
      syntax-checking
-     tabs
+     (tabs :variables
+           tabs-auto-hide t
+           tabs-auto-hide-delay 3)
      treemacs
      version-control
 
