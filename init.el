@@ -163,6 +163,8 @@ This function should only modify configuration layer settings."
      finance
 
      (elfeed :variables rmh-elfeed-org-files (list (concat org-roam-directory "/elfeed.org")))
+
+     ietf
      )
 
    ;; List of additional packages that will be installed without being
