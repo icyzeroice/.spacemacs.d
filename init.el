@@ -103,7 +103,8 @@ This function should only modify configuration layer settings."
           org-enable-reveal-js-support t
           org-enable-roam-support t
           org-roam-directory "~/Codespaces/org-roam"
-          org-directory "~/Codespaces/org")
+          org-directory "~/Codespaces/org"
+          org-agenda-files (list "~/Codespaces/org/todos.org"))
 
      graphviz
      (plantuml :variables
@@ -150,7 +151,7 @@ This function should only modify configuration layer settings."
      syntax-checking
      (tabs :variables
            tabs-auto-hide t
-           tabs-auto-hide-delay 3)
+           tabs-auto-hide-delay 10)
      treemacs
      version-control
 
