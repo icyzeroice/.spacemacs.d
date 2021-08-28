@@ -98,13 +98,47 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      markdown
 
+     bibtex
+
      (org :variables
+
+          ;; >>> org mode basic >>>
+          org-directory "~/Codespaces/org-mode-base/"
+          org-agenda-files (list (concat org-directory "agenda/todos.org"))
+
+          ;; https://orgmode.org/manual/Attachment-options.html#Attachment-options
+          org-attach-dir-relative t
+
+          org-attach-preferred-new-method 'dir
+
+          ;; https://emacs-china.org/t/emacs/15765/7
+          ;; org-export-with-tags nil
+
+          ;; >>> org roam >>>
+          org-enable-roam-support t
+          org-roam-directory (concat org-directory "roam/")
+          org-roam-dailies-directory "journal/"
+
+          ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Time-Parsing.html
+          org-roam-dailies-capture-templates '(("d" "default" entry
+                                                "* %?"
+                                                :if-new (file+head "%<%Y-%m-%d-%V>.org"
+                                                                   "#+title: %<%Y-%m-%d, %A [%V/52]>\n")))
+
+          ;; >>> org mode enhanced plugins >>>
           org-enable-github-support t
           org-enable-reveal-js-support t
-          org-enable-roam-support t
-          org-roam-directory "~/Codespaces/org-roam"
-          org-directory "~/Codespaces/org"
-          org-agenda-files (list "~/Codespaces/org/todos.org"))
+          org-enable-appear-support t
+          org-download-method 'attach
+
+          org-enable-org-journal-support t
+          org-journal-dir (concat org-roam-directory "journal/")
+          org-journal-file-format "%Y-%m-%d-%V.org"
+          org-journal-date-prefix "#+TITLE: "
+          org-journal-date-format "%Y-%m-%d, %A [%V/52]"
+          org-journal-time-prefix "* "
+          ;; org-journal-time-format ""
+          )
 
      graphviz
      (plantuml :variables
@@ -163,7 +197,7 @@ This function should only modify configuration layer settings."
 
      finance
 
-     (elfeed :variables rmh-elfeed-org-files (list (concat org-roam-directory "/elfeed.org")))
+     (elfeed :variables rmh-elfeed-org-files (list (concat org-roam-directory "elfeed.org")))
 
      ietf
      )
