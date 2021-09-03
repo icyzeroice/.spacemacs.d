@@ -15,8 +15,8 @@ function setup_latex_ubuntu()
 }
 function setup_latex_macos()
 {
-    brew cask install mactex
-    # brew cask install basictex
+    brew install --cask mactex
+    # brew install --cask basictex
 }
 function setup_latex()
 {
