@@ -122,8 +122,8 @@ This function should only modify configuration layer settings."
           ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Time-Parsing.html
           org-roam-dailies-capture-templates '(("d" "default" entry
                                                 "* %?"
-                                                :if-new (file+head "%<%Y-%m-%d-%V>.org"
-                                                                   "#+title: %<%Y-%m-%d, %A (%V/52)>\n")))
+                                                :if-new (file+head "%<%Y-%m-%d-%V-%u>.org"
+                                                                   "#+title: %<%Y-%m-%d (%V/52) %A>\n")))
 
           ;; >>> org mode enhanced plugins >>>
           org-enable-github-support t
@@ -133,9 +133,9 @@ This function should only modify configuration layer settings."
 
           org-enable-org-journal-support t
           org-journal-dir (concat org-roam-directory "journal/")
-          org-journal-file-format "%Y-%m-%d-%V.org"
+          org-journal-file-format "%Y-%m-%d-%V-%u.org"
           org-journal-date-prefix "#+TITLE: "
-          org-journal-date-format "%Y-%m-%d, %A (%V/52)"
+          org-journal-date-format "%Y-%m-%d (%V/52) %A"
           org-journal-time-prefix "* "
           ;; org-journal-time-format ""
           )
