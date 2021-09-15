@@ -134,7 +134,7 @@ This function should only modify configuration layer settings."
           org-enable-org-journal-support t
           org-journal-dir (concat org-roam-directory "journal/")
           org-journal-file-format "%Y-%m-%d-%V-%u.org"
-          org-journal-date-prefix "#+TITLE: "
+          org-journal-date-prefix "#+title: "
           org-journal-date-format "(%V/52) %Y %B %d, %A"
           org-journal-time-prefix "* "
           ;; org-journal-time-format ""
