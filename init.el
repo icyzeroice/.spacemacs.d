@@ -123,7 +123,7 @@ This function should only modify configuration layer settings."
           org-roam-dailies-capture-templates '(("d" "default" entry
                                                 "* %?"
                                                 :if-new (file+head "%<%Y-%m-%d-%V-%u>.org"
-                                                                   "#+title: %<%Y-%m-%d (%V/52) %A>\n")))
+                                                                   "#+title: %<(%V/52) %Y %B %d, %A>\n")))
 
           ;; >>> org mode enhanced plugins >>>
           org-enable-github-support t
@@ -135,7 +135,7 @@ This function should only modify configuration layer settings."
           org-journal-dir (concat org-roam-directory "journal/")
           org-journal-file-format "%Y-%m-%d-%V-%u.org"
           org-journal-date-prefix "#+TITLE: "
-          org-journal-date-format "%Y-%m-%d (%V/52) %A"
+          org-journal-date-format "(%V/52) %Y %B %d, %A"
           org-journal-time-prefix "* "
           ;; org-journal-time-format ""
           )
