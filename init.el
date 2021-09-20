@@ -104,7 +104,6 @@ This function should only modify configuration layer settings."
 
           ;; >>> org mode basic >>>
           org-directory "~/Codespaces/org-mode-base/"
-          org-agenda-files (list (concat org-directory "agenda/todos.org"))
 
           ;; https://orgmode.org/manual/Attachment-options.html#Attachment-options
           org-attach-dir-relative t
@@ -124,6 +123,12 @@ This function should only modify configuration layer settings."
                                                 "* %?"
                                                 :if-new (file+head "%<%Y-%m-%d-%V-%u>.org"
                                                                    "#+title: %<(%V/52) %Y %B %d, %A>\n")))
+
+
+          ;; >>> org mode more settings >>>
+          org-agenda-files (list (concat org-directory "agenda/")
+                                 (concat org-roam-directory "journal/"))
+
 
           ;; >>> org mode enhanced plugins >>>
           org-enable-github-support t
