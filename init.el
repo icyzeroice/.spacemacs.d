@@ -104,6 +104,13 @@ This function should only modify configuration layer settings."
 
           ;; >>> org mode basic >>>
           org-directory "~/Codespaces/org-mode-base/"
+          org-startup-folded "overview"
+
+          ;; org todo
+          ;; https://orgmode.org/manual/Tracking-TODO-state-changes.html
+          ;; https://www.reddit.com/r/orgmode/comments/hcoez9/which_keywords_do_you_use_for_your_orgmode/
+          org-todo-keywords '((sequence "TODO(t)" "STARTED(s!)" "SUSPENDED(p@)" "RESUMED(r@)" "DELEGATED(a)" "|" "DONE(d!)" "CANCELED(c@/@)"))
+          org-log-into-drawer "LOGBOOK"
 
           ;; https://orgmode.org/manual/Attachment-options.html#Attachment-options
           org-attach-dir-relative t
