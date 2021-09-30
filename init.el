@@ -114,7 +114,7 @@ This function should only modify configuration layer settings."
 
           ;; >>> org mode basic >>>
           org-directory "~/Codespaces/org-mode-base/"
-          org-startup-folded "overview"
+          org-startup-folded t
 
           ;; org todo
           ;; https://orgmode.org/manual/Tracking-TODO-state-changes.html
