@@ -71,8 +71,7 @@ This function should only modify configuration layer settings."
                  typescript-linter 'eslint
 
                  typescript-backend 'lsp
-                 typescript-lsp-linter nil
-                 )
+                 typescript-lsp-linter nil)
 
      react
 
