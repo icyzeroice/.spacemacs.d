@@ -45,24 +45,34 @@ This function should only modify configuration layer settings."
 
      web-beautify
 
+     prettier
+
      (json :variables
            json-fmt-tool 'prettier)
 
+     ;; https://develop.spacemacs.org/layers/+lang/javascript/README.html
      (javascript :variables
 
                  js2-mode-show-strict-warnings nil
 
                  javascript-backend 'lsp ;; default
                  javascript-lsp-linter nil
+                 node-add-modules-path t
 
                  ;; javascript-fmt-tool 'web-beautify ;; default
                  javascript-fmt-tool 'prettier
                  javascript-import-tool 'import-js)
 
+     ;; https://develop.spacemacs.org/layers/+lang/typescript/README.html
      (typescript :variables
+                 typescript-fmt-on-save t
+                 typescript-fmt-tool 'prettier
+
                  typescript-linter 'eslint
+
                  typescript-backend 'lsp
-                 typescript-lsp-linter nil)
+                 typescript-lsp-linter nil
+                 )
 
      react
 
