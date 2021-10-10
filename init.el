@@ -171,6 +171,10 @@ This function should only modify configuration layer settings."
      ;; ----------------------------------------------------------------
      (chinese :variables
               ;; chinese-default-input-method nil
+              pyim-page-tooltip 'popup
+              pyim-page-length 10
+              pyim-dicts '((:name "tsinghua" :file "~/.spacemacs.d/addons/pyim-dicts/pyim-tsinghua-dict/pyim-tsinghua-dict.pyim"))
+
               chinese-enable-youdao-dict t)
 
      ;; ----------------------------------------------------------------

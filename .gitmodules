@@ -1,0 +1,3 @@
+[submodule "addons/pyim-dicts/pyim-tsinghua-dict"]
+	path = addons/pyim-dicts/pyim-tsinghua-dict
+	url = git@github.com:redguardtoo/pyim-tsinghua-dict.git
