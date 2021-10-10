@@ -188,7 +188,7 @@ This function should only modify configuration layer settings."
      git
      helm
      ibuffer
-     ivy
+     ;; ivy ;; a replacement of helm and ido
      multiple-cursors
 
      search-engine
@@ -744,7 +744,7 @@ before packages are loaded."
                                     :size 15.0)))))
 
       (code (progn (cnfonts-enable)
-                  (cnfonts-set-spacemacs-fallback-fonts)))))
+                   (cnfonts-set-spacemacs-fallback-fonts)))))
 
   )
 
