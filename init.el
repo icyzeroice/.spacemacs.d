@@ -131,6 +131,7 @@ This function should only modify configuration layer settings."
 
           ;; >>> org roam >>>
           org-enable-roam-support t
+          org-enable-roam-protocol t
           org-roam-directory (concat org-directory "roam/")
           org-roam-dailies-directory "journal/"
 
