@@ -136,9 +136,10 @@ This function should only modify configuration layer settings."
           org-roam-dailies-directory "journal/"
 
           ;; org-roam-capture-templates
-          org-roam-capture-ref-templates '(("r" "ref" plain "%?" :if-new
-                                            (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}")
-                                            :unnarrowed t))
+          ;; https://org-roam.discourse.group/t/why-omit-the-timestamp-in-ref-note-filenames/1125/2
+          ;; org-roam-capture-ref-templates '(("r" "ref" plain "%?" :if-new
+          ;;                                   (file+head "%<%Y%m%d%H%M%S>-${slug}.org" "#+title: ${title}\n")
+          ;;                                   :unnarrowed t))
 
           ;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Time-Parsing.html
           org-roam-dailies-capture-templates '(("d" "default" entry
