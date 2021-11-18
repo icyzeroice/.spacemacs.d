@@ -34,6 +34,11 @@ This function should only modify configuration layer settings."
    dotspacemacs-configuration-layers
    '(
      ;; ----------------------------------------------------------------
+     ;; C/C++
+     ;; ----------------------------------------------------------------
+     (c-c++ :variables c-c++-backend 'lsp-clangd)
+
+     ;; ----------------------------------------------------------------
      ;; Front-end Technology Stack
      ;; Enabled layers:
      ;; URL https://github.com/syl20bnr/spacemacs/tree/develop/layers/+lang/javascript
